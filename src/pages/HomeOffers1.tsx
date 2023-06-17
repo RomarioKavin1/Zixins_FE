@@ -2,6 +2,7 @@ import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./HomeOffers1.module.css";
 import Sidebar from "../components/Sidebar";
+import Profilecard from "../components/Profilecard";
 const HomeOffers1: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -115,95 +116,14 @@ const HomeOffers1: FunctionComponent = () => {
         </div>
         <div className={styles.cards}>
           <div className={styles.card3}>
-            <div className={styles.text5}>
-              <div className={styles.buttonbase}>
-                <div className={styles.widthStructure}>
-                  <div className={styles.heightStructure}>
-                    <div className={styles.buttonBody3}>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                      <b className={styles.text6}>UNLINK</b>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.minwidth}>
-                    <div className={styles.content3} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.authenticateWithLinkedinContainer}>
-                <p
-                  className={styles.authenticateWithLinkedin}
-                >{`Authenticate With Linkedin to `}</p>
-                <p className={styles.authenticateWithLinkedin}>earn badge</p>
-              </div>
-              <b className={styles.linkedinAuth}>Linkedin Auth</b>
-            </div>
-            <img className={styles.imageIcon1} alt="" src="/image5.svg" />
+          <Profilecard name='Linkedin Auth' description='linkedin' imgsrc='/image5.svg'/>
           </div>
           <div className={styles.card2}>
-            <div className={styles.text7}>
-              <div className={styles.buttonbase1}>
-                <div className={styles.widthStructure}>
-                  <div className={styles.heightStructure}>
-                    <div className={styles.buttonBody3}>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                      <b className={styles.text6}>UNLINK</b>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.minwidth}>
-                    <div className={styles.content3} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.authenticateWithGithubContainer}>
-                <p
-                  className={styles.authenticateWithLinkedin}
-                >{`Authenticate With Github to `}</p>
-                <p className={styles.authenticateWithLinkedin}>earn badge</p>
-              </div>
-              <b className={styles.githubAuth}>Github Auth</b>
-            </div>
-            <img className={styles.imageIcon1} alt="" src="/image3.svg" />
+            <Profilecard name='Github Auth' description='Github' imgsrc='/image3.svg'/>
           </div>
           <div className={styles.card1}>
-            <div className={styles.text9}>
-              <div className={styles.buttonbase2}>
-                <div className={styles.widthStructure}>
-                  <div className={styles.heightStructure}>
-                    <div className={styles.buttonBody3}>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                      <b className={styles.text6}>UNLINK</b>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.minwidth}>
-                    <div className={styles.content3} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.authenticateWithGoogleContainer}>
-                <p
-                  className={styles.authenticateWithLinkedin}
-                >{`Authenticate With Google to `}</p>
-                <p className={styles.authenticateWithLinkedin}>earn badge</p>
-              </div>
-              <b className={styles.googleAuth}>Google Auth</b>
-            </div>
-            <img className={styles.imageIcon3} alt="" src="/image6@2x.png" />
-          </div>
+            <Profilecard name='Google Auth' description='Google' imgsrc='/image6@2x.png'/>
+          </div> 
         </div>
       </div>
       <Sidebar/>
