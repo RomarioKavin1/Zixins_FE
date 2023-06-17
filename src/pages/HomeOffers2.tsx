@@ -2,6 +2,7 @@ import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./HomeOffers2.module.css";
 import Sidebar from "../components/Sidebar";
+import Profilecard1 from "../components/Profilecard1";
 const HomeOffers2: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -118,56 +119,10 @@ const HomeOffers2: FunctionComponent = () => {
         </div>
         <div className={styles.cards}>
           <div className={styles.card2}>
-            <div className={styles.text5}>
-              <div className={styles.buttonbase}>
-                <div className={styles.widthStructure}>
-                  <div className={styles.heightStructure}>
-                    <div className={styles.buttonBody3}>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                      <b className={styles.text6}>Learn More</b>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.minwidth}>
-                    <div className={styles.content3} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.get500Stars}>Get 500 stars in Github</div>
-              <b className={styles.githubMrpopular}>Github Mr.Popular</b>
-            </div>
-            <img className={styles.imageIcon1} alt="" src="/image3.svg" />
+            <Profilecard1 name='Github Mr.Popular' description="Get 500 stars in Github" imgsrc="/image3.svg"/>
           </div>
           <div className={styles.card1}>
-            <div className={styles.text7}>
-              <div className={styles.buttonbase1}>
-                <div className={styles.widthStructure}>
-                  <div className={styles.heightStructure}>
-                    <div className={styles.buttonBody3}>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                      <b className={styles.text8}>Learn More</b>
-                      <div className={styles.icon4}>
-                        <div className={styles.div}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.minwidth}>
-                    <div className={styles.content3} />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.make500Commit}>
-                Make 500 commit in github
-              </div>
-              <b className={styles.githubMrpopular}>Github TryHard</b>
-            </div>
-            <img className={styles.imageIcon1} alt="" src="/image4.svg" />
+            <Profilecard1 name='Github TryHard' description="Make 500 commit in github" imgsrc="/image3.svg"/>
           </div>
         </div>
       </div>

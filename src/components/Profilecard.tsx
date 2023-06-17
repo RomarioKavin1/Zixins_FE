@@ -1,4 +1,4 @@
-import styles from "./HomeOffers1.module.css";
+import styles from "./Profilecard.module.css";
 interface ChildComponentProps {
     name: string;
     imgsrc: string;

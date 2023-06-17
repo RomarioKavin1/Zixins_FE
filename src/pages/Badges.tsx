@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import styles from "./Badges.module.css";
 import Sidebar from "../components/Sidebar";
+import Zixins from "../components/Zixins";
 const Badges: FunctionComponent = () => {
   return (
     <div className={styles.badges}>
@@ -34,110 +35,22 @@ const Badges: FunctionComponent = () => {
         </div>
       </div>
       <div className={styles.firstCard}>
-        <img className={styles.backgroundIcon} alt="" src="/background.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text2}>
-          <img
-            className={styles.ioniconaarrowforward}
-            alt=""
-            src="/ioniconaarrowforward.svg"
-          />
-          <div className={styles.authenticateWithTwitterContainer}>
-            <p
-              className={styles.authenticateWithTwitter}
-            >{`Authenticate With twitter to `}</p>
-            <p className={styles.authenticateWithTwitter}>earn badge</p>
-          </div>
-          <b className={styles.twitterAuthBadge}>Twitter Auth Badge</b>
-        </div>
+        <Zixins name="twitter" description="Twitter Auth Badge" imgsrc="/background.svg"/>
       </div>
       <div className={styles.firstCard1}>
-        <img className={styles.backgroundIcon} alt="" src="/background1.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text3}>
-          <img
-            className={styles.ioniconaarrowforward1}
-            alt=""
-            src="/ioniconaarrowforward.svg"
-          />
-          <div className={styles.authenticateWithGoogleContainer}>
-            <p
-              className={styles.authenticateWithTwitter}
-            >{`Authenticate With Google `}</p>
-            <p className={styles.authenticateWithTwitter}>to earn badge</p>
-          </div>
-          <b className={styles.instagramAuthBadge}>Instagram Auth Badge</b>
-        </div>
+        <Zixins name="Instagram" description="Instagram Auth Badge" imgsrc="/background1.svg"/>
       </div>
       <div className={styles.firstCard2}>
-        <img className={styles.backgroundIcon} alt="" src="/background2.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text4}>
-          <img
-            className={styles.ioniconaarrowforward2}
-            alt=""
-            src="/ioniconaarrowforward1.svg"
-          />
-          <div className={styles.authenticateWithGoogleContainer}>
-            Authenticate With linkedin to earn badge
-          </div>
-          <b className={styles.linkedinAuthBadge}>Linkedin Auth Badge</b>
-        </div>
+        <Zixins name="linkedin" description="Linkedin Auth Badge" imgsrc="/background2.svg"/>
       </div>
       <div className={styles.firstCard3}>
-        <img
-          className={styles.backgroundIcon3}
-          alt=""
-          src="/background3@2x.png"
-        />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text2}>
-          <img
-            className={styles.ioniconaarrowforward3}
-            alt=""
-            src="/ioniconaarrowforward1.svg"
-          />
-          <div className={styles.authenticateWithTwitterContainer}>
-            <p className={styles.authenticateWithTwitter}>
-              Authenticate With Google
-            </p>
-            <p className={styles.authenticateWithTwitter}> to earn badge</p>
-          </div>
-          <b className={styles.twitterAuthBadge}>Google Auth Badge</b>
-        </div>
+        <Zixins name="Google" description="Google Auth Badge" imgsrc="/background3@2x.png"/>
       </div>
       <div className={styles.firstCard4}>
-        <img className={styles.backgroundIcon} alt="" src="/background4.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text2}>
-          <img
-            className={styles.ioniconaarrowforward4}
-            alt=""
-            src="/ioniconaarrowforward1.svg"
-          />
-          <div className={styles.authenticateWithTwitterContainer}>
-            <p
-              className={styles.authenticateWithTwitter}
-            >{`Authenticate With Google to `}</p>
-            <p className={styles.authenticateWithTwitter}>earn badge</p>
-          </div>
-          <b className={styles.twitterAuthBadge}>Github Auth Badge</b>
-        </div>
+        <Zixins name="Github" description="Github Auth Badge" imgsrc="/background4.svg"/>
       </div>
       <div className={styles.firstCard5}>
-        <img className={styles.backgroundIcon} alt="" src="/background5.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text7}>
-          <img
-            className={styles.ioniconaarrowforward5}
-            alt=""
-            src="/ioniconaarrowforward.svg"
-          />
-          <div className={styles.authenticateWithGoogleContainer}>
-            Authenticate With Faebook to earn badge
-          </div>
-          <b className={styles.facebookAuthBadge}>Facebook Auth Badge</b>
-        </div>
+        <Zixins name="Facebook" description="Facebook Auth Badge" imgsrc="/background5.svg"/>
       </div>
       <Sidebar/>
     </div>
