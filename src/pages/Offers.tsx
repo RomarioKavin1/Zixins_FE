@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import styles from "./Offers.module.css";
 import Sidebar from "../components/Sidebar";
+import Shiji from "../components/Shiji";
 const Offers: FunctionComponent = () => {
   return (
     <div className={styles.offers}>
@@ -34,30 +35,10 @@ const Offers: FunctionComponent = () => {
         </div>
       </div>
       <div className={styles.firstCard}>
-        <img className={styles.backgroundIcon} alt="" src="/background10.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text2}>
-          <img
-            className={styles.ioniconaarrowforward}
-            alt=""
-            src="/ioniconaarrowforward1.svg"
-          />
-          <div className={styles.get500Stars}>Get 500 stars in Github</div>
-          <b className={styles.githubMrpopular}>Github Mr.Popular</b>
-        </div>
+        <Shiji name={"Github Mr.Popular"} imgsrc={"/background10.svg"} description={"Get 500 stars in Github"}/>
       </div>
       <div className={styles.firstCard1}>
-        <img className={styles.backgroundIcon} alt="" src="/background11.svg" />
-        <img className={styles.imageIcon} alt="" src="/image.svg" />
-        <div className={styles.text2}>
-          <img
-            className={styles.ioniconaarrowforward}
-            alt=""
-            src="/ioniconaarrowforward1.svg"
-          />
-          <div className={styles.get500Stars}>Make 500 commit in github</div>
-          <b className={styles.githubMrpopular}>Github TryHard</b>
-        </div>
+        <Shiji name={"Github TryHard"} imgsrc={"/background11.svg"} description={"Make 500 commit in github"}/>
       </div>
       <Sidebar/>
     </div>

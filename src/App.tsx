@@ -9,7 +9,6 @@ import Login from "./pages/Login";
 import HomeOffers2 from "./pages/HomeOffers2";
 import HomeOffers1 from "./pages/HomeOffers1";
 import Offers from "./pages/Offers";
-import Offers1 from "./pages/Offers1";
 import Landing from "./pages/Landing";
 import { useEffect } from "react";
 
@@ -49,10 +48,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/offers1":
-        title = "";
-        metaDescription = "";
-        break;
       case "/badges":
         title = "";
         metaDescription = "";
@@ -80,7 +75,6 @@ function App() {
       <Route path="/homeoffers2" element={<HomeOffers2 />} />
       <Route path="/homeoffers1" element={<HomeOffers1 />} />
       <Route path="/offers" element={<Offers />} />
-      <Route path="/offers1" element={<Offers1 />} />
       <Route path="/badges" element={<Badges />} />
     </Routes>
   );
