@@ -16,6 +16,9 @@ const Badges: FunctionComponent = () => {
   const linkedin=()=>{
     window.open("http://localhost:5000/auth/linkedin","newwindow","width=600,height=600")
   }
+  const facebook=()=>{
+    window.open("http://localhost:5000/auth/facebook  ","newwindow","width=600,height=600")
+  }
   return (
     <div className={styles.badges}>
       <div className={styles.badgesChild} />
@@ -62,9 +65,9 @@ const Badges: FunctionComponent = () => {
       <div className={styles.firstCard4}>
         <Zixins name="Github" description="Github Auth Badge" imgsrc="/background4.svg" click={github}/>
       </div>
-      {/* <div className={styles.firstCard5}>
-        <Zixins name="Facebook" description="Facebook Auth Badge" imgsrc="/background5.svg"/>
-      </div> */}
+      <div className={styles.firstCard5}>
+        <Zixins name="Facebook" description="Facebook Auth Badge" imgsrc="/background5.svg" click={facebook}/>
+      </div>
       <Sidebar/>
     </div>
   );
