@@ -3,12 +3,13 @@ interface ChildComponentProps {
   name: string;
   imgsrc: string;
   description: string;
+  click:any
 }
 const Zicins: React.FC<ChildComponentProps> = (props) => {
-  const { name, imgsrc, description } = props;
+  const { name, imgsrc, description,click } = props;
   return (
     <div>
-      <img className={styles.backgroundIcon} alt="" src={imgsrc} />
+      <img className={styles.backgroundIcon} alt="" src={imgsrc} onClick={click} />
         <img className={styles.imageIcon} alt="" src="/image.svg" />
         <div className={styles.text2}>
           <img
