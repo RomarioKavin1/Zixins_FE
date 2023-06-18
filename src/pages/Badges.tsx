@@ -7,6 +7,9 @@ const Badges: FunctionComponent = () => {
   const google=()=>{
     window.open("http://localhost:5000/auth/google","newwindow","width=600,height=600")
   }
+  const github=()=>{
+    window.open("http://localhost:5000/auth/github","newwindow","width=600,height=600")
+  }
   return (
     <div className={styles.badges}>
       <div className={styles.badgesChild} />
@@ -50,10 +53,10 @@ const Badges: FunctionComponent = () => {
       <div className={styles.firstCard3}>
         <Zixins name="Google" description="Google Auth Badge" imgsrc="/background3@2x.png" click={google}/>
       </div>
-      {/* <div className={styles.firstCard4}>
-        <Zixins name="Github" description="Github Auth Badge" imgsrc="/background4.svg"/>
+      <div className={styles.firstCard4}>
+        <Zixins name="Github" description="Github Auth Badge" imgsrc="/background4.svg" click={github}/>
       </div>
-      <div className={styles.firstCard5}>
+      {/* <div className={styles.firstCard5}>
         <Zixins name="Facebook" description="Facebook Auth Badge" imgsrc="/background5.svg"/>
       </div> */}
       <Sidebar/>
