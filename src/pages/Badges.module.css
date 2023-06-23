@@ -589,8 +589,9 @@
   position: relative;
   background-color: var(--blackampwhite-white);
   width: 100%;
-  height: 1369px;
-  overflow-y: auto;
+  height: 1080px;
+  overflow: hidden;
+  overflow-y: hidden;
   text-align: left;
   font-size: var(--font-size-base);
   color: var(--blackampwhite-white);
