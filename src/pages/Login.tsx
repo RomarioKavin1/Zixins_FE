@@ -1,13 +1,27 @@
-import { FunctionComponent, useCallback } from "react";
+import { FunctionComponent, useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
+import { useWeb3Modal } from '@web3modal/react'
+import { useAccount } from 'wagmi'
+
+// const [Connected, setConnected] = useState(isConnected)
+// const checkconnect = () => {
+//   const {isConnected} = useAccount()
+//   isConnected ? setConnected(true) : setConnected(false)
+// }
 const Login: FunctionComponent = () => {
   const navigate = useNavigate();
-
-  const onMetaMaskContainerClick = useCallback(() => {
-    navigate("/homeoffers1");
-  }, [navigate]);
-
+  const {isConnected} = useAccount();
+  
+  useEffect(() => {
+    async () => {
+      const {isConnected} = useAccount();
+    }
+    if(isConnected){
+    close();
+    navigate("/homeoffers1");}
+  }, [isConnected])
+  const { open, close } = useWeb3Modal()
   return (
     <div className={styles.login}>
       <div className={styles.loginChild} />
@@ -29,7 +43,7 @@ const Login: FunctionComponent = () => {
             src="/coinbase-wc.svg"
           />
         </div>
-        <div className={styles.metamask} onClick={onMetaMaskContainerClick}>
+        <div className={styles.metamask} onClick={() => open()}>
           <div className={styles.metamask1}>Metamask</div>
           <img
             className={styles.walletconnectWcIcon}
@@ -99,7 +113,7 @@ const Login: FunctionComponent = () => {
             </div>
           </div>
         </div>
-        <div className={styles.routerHackathon}>Router Hackathon</div>
+        <div className={styles.routerHackathon}>Zixin</div>
       </div>
     </div>
   );

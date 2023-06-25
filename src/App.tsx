@@ -11,6 +11,19 @@ import HomeOffers1 from "./pages/HomeOffers1";
 import Offers from "./pages/Offers";
 import Landing from "./pages/Landing";
 import { useEffect } from "react";
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { polygonMumbai } from 'wagmi/chains'
+const chains = [polygonMumbai]
+const projectId = 'YOUR_PROJECT_ID'
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, version: 2, chains }),
+  publicClient
+})
+const ethereumClient = new EthereumClient(wagmiConfig, chains)
 
 function App() {
   const action = useNavigationType();
@@ -69,6 +82,8 @@ function App() {
   }, [pathname]);
 
   return (
+    <>
+      <WagmiConfig config={wagmiConfig}>
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
@@ -77,6 +92,9 @@ function App() {
       <Route path="/offers" element={<Offers />} />
       <Route path="/badges" element={<Badges />} />
     </Routes>
+    </WagmiConfig>
+    <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    </>
   );
 }
 export default App;
