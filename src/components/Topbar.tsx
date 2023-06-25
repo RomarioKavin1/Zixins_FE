@@ -43,7 +43,7 @@ return (<div className={styles.profileElements}>
             <div className={styles.x2f59dbbcb3b393d86dbd539105e22}>
               {address}
             </div>
-            <b className={styles.DisDisconnectedWallet}>DisDisconnected Wallet</b>
+            <b className={styles.DisDisconnectedWallet}>Wallet</b>
           </div>
           <img className={styles.imageIcon} alt="" src="/image2@2x.png" />
           <img className={styles.icon1} alt="" src="/icon10.svg" />

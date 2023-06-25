@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./HomeOffers2.module.css";
 import Sidebar from "../components/Sidebar";
 import Profilecard1 from "../components/Profilecard1";
+import Topbar from "../components/Topbar";
 const HomeOffers2: FunctionComponent = () => {
   const navigate = useNavigate();
 
@@ -27,38 +28,7 @@ const HomeOffers2: FunctionComponent = () => {
           </div>
         </div>
       </div>
-      <div className={styles.profileElements}>
-        <img
-          className={styles.backgroundIcon}
-          alt=""
-          src="/background7@2x.png"
-        />
-        <div className={styles.projects}>
-          <div className={styles.overview}>
-            <div className={styles.widthStructure}>
-              <div className={styles.heightStructure}>
-                <div className={styles.buttonBody}>
-                  <img className={styles.icon} alt="" src="/icon4.svg" />
-                  <b className={styles.text1}>Sign Out</b>
-                </div>
-              </div>
-              <div className={styles.minwidth}>
-                <div className={styles.content} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.avatar}>
-          <div className={styles.name}>
-            <div className={styles.x2f59dbbcb3b393d86dbd539105e22}>
-              0x2f59dBBcb3B393D86dbd539105E22ee4CaC23563
-            </div>
-            <b className={styles.connectedWallet}>Connected Wallet</b>
-          </div>
-          <img className={styles.imageIcon} alt="" src="/image2@2x.png" />
-          <img className={styles.icon1} alt="" src="/icon5.svg" />
-        </div>
-      </div>
+     <Topbar />
       <div className={styles.card}>
         <img
           className={styles.backgroundIcon1}
